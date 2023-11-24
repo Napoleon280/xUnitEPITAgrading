@@ -3,9 +3,9 @@ description: 'Say Hello'
 author: 'Arthur Wambst'
 
 inputs:
- registry_username:
-   description: “Username for image registry”
-   required: false
+  site_username:
+   description: “Username”
+   required: true
 
 runs:
   using: "composite"
@@ -22,7 +22,7 @@ runs:
       shell: bash
     - run: curl https://drive.google.com/drive/folders/177WAQk9dW41d3GnRDRIPmcO34pcI_Q_p?usp=sharing --user "$SUPER_SECRET"
       env:
-        SUPER_SECRET: ${{ secrets.MDP_ACCES_XUNIT }}
+        SUPER_SECRET: ${{ inputs.site_username }}
       shell: bash
     - run: dotnet restore #./PartySmurf.sln
       shell: bash   
