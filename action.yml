@@ -4,20 +4,18 @@ author: 'Arthur Wambst'
 
 runs:
   using: "composite"
-    steps:
-      - uses: actions/checkout@v4
-        shell: bash
-
-      - uses: actions/setup-dotnet@v3
-        with:
-         dotnet-version: 8.x
-        shell: bash
-      # You can test your matrix by printing the current dotnet version
-      - run: dotnet --version
-        shell: bash
-      - run: dotnet restore #./PartySmurf.sln
-        shell: bash   
-      - run: dotnet build ./PartySmurf.sln --no-restore
-        shell: bash
-      - run: dotnet test ./XunitTESTS/XunitTESTS.csproj --no-build --verbosity normal --logger "html;logfilename=testResults.html"
-        shell: bash
+  steps:
+    - uses: actions/checkout@v4
+      shell: bash
+    - uses: actions/setup-dotnet@v3
+      with:
+      dotnet-version: 8.x
+      shell: bash
+    - run: dotnet --version
+      shell: bash
+    - run: dotnet restore #./PartySmurf.sln
+      shell: bash   
+    - run: dotnet build ./PartySmurf.sln --no-restore
+      shell: bash
+    - run: dotnet test ./XunitTESTS/XunitTESTS.csproj --no-build --verbosity normal --logger "html;logfilename=testResults.html"
+      shell: bash
