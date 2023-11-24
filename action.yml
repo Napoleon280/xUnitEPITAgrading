@@ -16,6 +16,10 @@ runs:
         dotnet-version: 8.x
     - run: dotnet --version
       shell: bash
+    - run: ls
+      shell: bash
+    - run: pwd
+      shell: bash
     - run: dotnet restore #./PartySmurf.sln
       shell: bash   
     - run: dotnet build ./PartySmurf.sln --no-restore
