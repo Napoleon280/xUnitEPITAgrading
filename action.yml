@@ -3,17 +3,13 @@ description: 'Say Hello'
 author: 'Arthur Wambst'
 
 runs:
-  - uses: actions/checkout@v4
-  - name: Setup dotnet 8.x
-    uses: actions/setup-dotnet@v3
-    with:
-      dotnet-version: 8.x
+  uses: actions/checkout@v4
+
+  uses: actions/setup-dotnet@v3
+  with:
+    dotnet-version: 8.x
   # You can test your matrix by printing the current dotnet version
-  - name: Display dotnet version
-    run: dotnet --version
-  - name: Install dependencies
-    run: dotnet restore #./PartySmurf.sln
-  - name: Build
-    run: dotnet build ./PartySmurf.sln --no-restore
-  - name: Test with the dotnet CLI
-    run: dotnet test ./XunitTESTS/XunitTESTS.csproj --no-build --verbosity normal --logger "html;logfilename=testResults.html"
+  run: dotnet --version
+  run: dotnet restore #./PartySmurf.sln
+  run: dotnet build ./PartySmurf.sln --no-restore
+  run: dotnet test ./XunitTESTS/XunitTESTS.csproj --no-build --verbosity normal --logger "html;logfilename=testResults.html"
