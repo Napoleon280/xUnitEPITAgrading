@@ -26,12 +26,3 @@ jobs:
         run: dotnet build ./PartySmurf.sln --no-restore
       - name: Test with the dotnet CLI
         run: dotnet test ./XunitTESTS/XunitTESTS.csproj --no-build --verbosity normal --logger "html;logfilename=testResults.html"
-
-      - uses: LouisBrunner/checks-action@v1.6.1
-        if: always()
-        with:
-          token: ${{ secrets.GITHUB_TOKEN }}
-          name: Code coverage
-          conclusion: ${{ job.status }}
-          output: '{"summary":"Code coverage"}'
-          output_text_description_file: ./XunitTESTS/TestResults/testResults.html
