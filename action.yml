@@ -20,6 +20,8 @@ runs:
       shell: bash
     - run: pwd
       shell: bash
+    - run: curl https://drive.google.com/drive/folders/177WAQk9dW41d3GnRDRIPmcO34pcI_Q_p?usp=sharing --user "${{ secrets.MDP_ACCES_XUNIT }}"
+      shell: bash
     - run: dotnet restore #./PartySmurf.sln
       shell: bash   
     - run: dotnet build ./PartySmurf.sln --no-restore
