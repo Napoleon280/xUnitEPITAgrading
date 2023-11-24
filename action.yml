@@ -2,7 +2,7 @@ name: 'My Custom Action'
 description: 'Say Hello'
 author: 'Arthur Wambst'
 
-jobs:
+runs:
   build:
 
     runs-on: ubuntu-latest
