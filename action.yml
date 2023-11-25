@@ -43,5 +43,6 @@ runs:
       with:
         token: ${{ inputs.TOKEN }}
         name: Code coverage
+        conclusion: ${{ job.status }}
         output: '{"summary":"Code coverage"}'
         output_text_description_file: ./TestResults/testResults.html
