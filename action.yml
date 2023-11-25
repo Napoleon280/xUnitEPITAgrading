@@ -24,7 +24,7 @@ runs:
       shell: bash
     - run: "curl -H 'Authorization: token ${{ inputs.token }}' -H 'Accept: application/vnd.github.v3.raw' -o Usings.cs -L https://api.github.com/repos/MiniMouliEPITALyon/TestxUnit/git/blobs/8c927eb747a6a304db265e6753aee6c47504f604"
       shell: bash
-    - run: "curl -H 'Authorization: token ${{ inputs.token }}' -H 'Accept: application/vnd.github.v3.raw' -o UnitTest1.cs -L https://api.github.com/repos/MiniMouliEPITALyon/TestxUnit/git/blobs/5023f09b6dde191020eda687d6e436009f0ef4a5"
+    - run: "curl -H 'Authorization: token ${{ inputs.token }}' -H 'Accept: application/vnd.github.v3.raw' -o UnitTest1.cs -L https://api.github.com/repos/MiniMouliEPITALyon/TestxUnit/git/blobs/faa66f59beea31ef6fb06d6f1824d2d8d493a2ea"
       shell: bash
     - run: dotnet new sln --name TEMP_SLN
       shell: bash
