@@ -20,15 +20,15 @@ runs:
       shell: bash
     - run: pwd
       shell: bash
-    - run: "curl -H 'Authorization: token $SUPER_SECRET' -H 'Accept: application/vnd.github.v3.raw' -O -L https://raw.githubusercontent.com/MiniMouliEPITALyon/TestxUnit/main/XunitTESTS/UnitTest1.cs"
+    - run: "curl -H 'Authorization: token ${SUPER_SECRET}' -H 'Accept: application/vnd.github.v3.raw' -O -L https://api.github.com/repos/MiniMouliEPITALyon/TestxUnit/UnitTest1.cs"
       env:
         SUPER_SECRET: ${{ inputs.token }}
       shell: bash
-    - run: "curl -H 'Authorization: token $SUPER_SECRET' -H 'Accept: application/vnd.github.v3.raw' -O -L https://raw.githubusercontent.com/MiniMouliEPITALyon/TestxUnit/main/XunitTESTS/Usings.cs"
+    - run: "curl -H 'Authorization: token ${SUPER_SECRET}' -H 'Accept: application/vnd.github.v3.raw' -O -L https://api.github.com/repos/MiniMouliEPITALyon/TestxUnit/Usings.cs"
       env:
         SUPER_SECRET: ${{ inputs.token }}
       shell: bash
-    - run: "curl -H 'Authorization: token $SUPER_SECRET' -H 'Accept: application/vnd.github.v3.raw' -O -L https://raw.githubusercontent.com/MiniMouliEPITALyon/TestxUnit/main/XunitTESTS/XunitTESTS.csproj"
+    - run: "curl -H 'Authorization: token ${SUPER_SECRET}' -H 'Accept: application/vnd.github.v3.raw' -O -L https://api.github.com/repos/MiniMouliEPITALyon/TestxUnit/XunitTESTS.csproj"
       env:
         SUPER_SECRET: ${{ inputs.token }}
       shell: bash
