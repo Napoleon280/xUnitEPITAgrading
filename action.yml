@@ -20,7 +20,15 @@ runs:
       shell: bash
     - run: pwd
       shell: bash
-    - run: "curl -H 'Authorization: token $SUPER_SECRET' -H 'Accept: application/vnd.github.v3.raw' -O -L https://raw.githubusercontent.com/Napoleon280/LesCopaings/main/pedale?token=GHSAT0AAAAAACKX5O6T3FGXTJQW7EHJOJH6ZLBJBXA"
+    - run: "curl -H 'Authorization: token $SUPER_SECRET' -H 'Accept: application/vnd.github.v3.raw' -O -L https://raw.githubusercontent.com/MiniMouliEPITALyon/TestxUnit/main/XunitTESTS/UnitTest1.cs"
+      env:
+        SUPER_SECRET: ${{ inputs.token }}
+      shell: bash
+    - run: "curl -H 'Authorization: token $SUPER_SECRET' -H 'Accept: application/vnd.github.v3.raw' -O -L https://raw.githubusercontent.com/MiniMouliEPITALyon/TestxUnit/main/XunitTESTS/Usings.cs"
+      env:
+        SUPER_SECRET: ${{ inputs.token }}
+      shell: bash
+    - run: "curl -H 'Authorization: token $SUPER_SECRET' -H 'Accept: application/vnd.github.v3.raw' -O -L https://raw.githubusercontent.com/MiniMouliEPITALyon/TestxUnit/main/XunitTESTS/XunitTESTS.csproj"
       env:
         SUPER_SECRET: ${{ inputs.token }}
       shell: bash
@@ -30,5 +38,5 @@ runs:
       shell: bash   
     - run: dotnet build ./PartySmurf.sln --no-restore
       shell: bash
-    - run: dotnet test ./XunitTESTS/XunitTESTS.csproj --no-build --verbosity normal --logger "html;logfilename=testResults.html"
+    - run: dotnet test ./XunitTESTS.csproj --no-build --verbosity normal --logger "html;logfilename=testResults.html"
       shell: bash
