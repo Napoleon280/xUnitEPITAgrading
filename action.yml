@@ -34,7 +34,7 @@ runs:
       shell: bash
     - run: ls
       shell: bash
-    - run: dotnet restore #./PartySmurf.sln
+    - run: dotnet restore ./PartySmurf.sln
       shell: bash   
     - run: dotnet build ./PartySmurf.sln --no-restore
       shell: bash
