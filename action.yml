@@ -20,11 +20,11 @@ runs:
       shell: bash
     - run: pwd
       shell: bash
-    - run: "curl -H 'Authorization: token ${{ inputs.token }}' -H 'Accept: application/vnd.github.v3.raw' -o XunitTESTS.csproj -L https://api.github.com/repos/MiniMouliEPITALyon/TestxUnit/contents/XunitTESTS/XunitTESTS.csproj?ref=B2TP1"
+    - run: "curl -H 'Authorization: token ${{ inputs.token }}' -H 'Accept: application/vnd.github.v3.raw' -o XunitTESTS.csproj -L https://api.github.com/repos/MiniMouliEPITALyon/TestxUnit/contents/XunitTESTS/XunitTESTS.csproj?ref=B2TP2"
       shell: bash
-    - run: "curl -H 'Authorization: token ${{ inputs.token }}' -H 'Accept: application/vnd.github.v3.raw' -o Usings.cs -L https://api.github.com/repos/MiniMouliEPITALyon/TestxUnit/contents/XunitTESTS/Usings.cs?ref=B2TP1"
+    - run: "curl -H 'Authorization: token ${{ inputs.token }}' -H 'Accept: application/vnd.github.v3.raw' -o Usings.cs -L https://api.github.com/repos/MiniMouliEPITALyon/TestxUnit/contents/XunitTESTS/Usings.cs?ref=B2TP2"
       shell: bash
-    - run: "curl -H 'Authorization: token ${{ inputs.token }}' -H 'Accept: application/vnd.github.v3.raw' -o UnitTest1.cs -L https://api.github.com/repos/MiniMouliEPITALyon/TestxUnit/contents/XunitTESTS/UnitTest1.cs?ref=B2TP1"
+    - run: "curl -H 'Authorization: token ${{ inputs.token }}' -H 'Accept: application/vnd.github.v3.raw' -o UnitTest1.cs -L https://api.github.com/repos/MiniMouliEPITALyon/TestxUnit/contents/XunitTESTS/UnitTest1.cs?ref=B2TP2"
       shell: bash
     - run: dotnet new sln --name TEMP_SLN
       shell: bash
