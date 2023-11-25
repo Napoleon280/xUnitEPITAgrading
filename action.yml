@@ -1,5 +1,5 @@
-name: 'My Custom Action'
-description: 'Say Hello'
+name: 'EPITAxUnitrunner'
+description: 'Get and run xUnit tests on EPITA practicals, avoids any share-code, and writes tests results'
 author: 'Arthur Wambst'
 
 inputs:
