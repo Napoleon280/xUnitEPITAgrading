@@ -39,10 +39,10 @@ runs:
     - run: dotnet test ./XunitTESTS.csproj --no-build --verbosity normal --logger "html;logfilename=testResults.html"
       shell: bash
     - uses: LouisBrunner/checks-action@v1.6.1
-        if: always()
-        with:
-          token: ${{ secrets.TOKEN }}
-          name: Code coverage
-          conclusion: ${{ job.status }}
-          output: '{"summary":"Code coverage"}'
-          output_text_description_file: ./TestResults/testResults.html
+      if: always()
+      with:
+        token: ${{ secrets.TOKEN }}
+        name: Code coverage
+        conclusion: ${{ job.status }}
+        output: '{"summary":"Code coverage"}'
+        output_text_description_file: ./TestResults/testResults.html
