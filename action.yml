@@ -20,17 +20,11 @@ runs:
       shell: bash
     - run: pwd
       shell: bash
-    - run: "curl -H 'Authorization: token ${{ SUPER_SECRET }}' -H 'Accept: application/vnd.github.v3.raw' -O -L https://api.github.com/repos/MiniMouliEPITALyon/TestxUnit/UnitTest1.cs"
-      env:
-        SUPER_SECRET: ${{ inputs.token }}
+    - run: "curl -H 'Authorization: token ${{ inputs.token }}' -H 'Accept: application/vnd.github.v3.raw' -O -L https://api.github.com/repos/MiniMouliEPITALyon/TestxUnit/UnitTest1.cs"
       shell: bash
-    - run: "curl -H 'Authorization: token ${{ SUPER_SECRET }}' -H 'Accept: application/vnd.github.v3.raw' -O -L https://api.github.com/repos/MiniMouliEPITALyon/TestxUnit/Usings.cs"
-      env:
-        SUPER_SECRET: ${{ inputs.token }}
+    - run: "curl -H 'Authorization: token ${{ inputs.token }}' -H 'Accept: application/vnd.github.v3.raw' -O -L https://api.github.com/repos/MiniMouliEPITALyon/TestxUnit/Usings.cs"
       shell: bash
-    - run: "curl -H 'Authorization: token ${{ SUPER_SECRET }}' -H 'Accept: application/vnd.github.v3.raw' -O -L https://api.github.com/repos/MiniMouliEPITALyon/TestxUnit/XunitTESTS.csproj"
-      env:
-        SUPER_SECRET: ${{ inputs.token }}
+    - run: "curl -H 'Authorization: token ${{ inputs.token }}' -H 'Accept: application/vnd.github.v3.raw' -O -L https://api.github.com/repos/MiniMouliEPITALyon/TestxUnit/XunitTESTS.csproj"
       shell: bash
     - run: ls
       shell: bash
