@@ -32,9 +32,9 @@ runs:
       shell: bash
     - run: dotnet sln TEMP_SLN.sln add XunitTESTS.csproj
       shell: bash
-    - run: dotnet restore ./TEMP_SLN
+    - run: dotnet restore ./TEMP_SLN.sln
       shell: bash   
-    - run: dotnet build ./TEMP_SLN --no-restore
+    - run: dotnet build ./TEMP_SLN.sln --no-restore
       shell: bash
     - run: dotnet test ./XunitTESTS.csproj --no-build --verbosity normal --logger "html;logfilename=testResults.html"
       shell: bash
