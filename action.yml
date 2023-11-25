@@ -26,17 +26,15 @@ runs:
       shell: bash
     - run: "curl -H 'Authorization: token ${{ inputs.token }}' -H 'Accept: application/vnd.github.v3.raw' -o UnitTest1.cs -L https://api.github.com/repos/MiniMouliEPITALyon/TestxUnit/git/blobs/077c0dfb909fb95d1ba8b8d76b1e0bf1fea60444"
       shell: bash
-    - run: cat UnitTest1.cs
+    - run: dotnet new sln --name TEMP_SLN
       shell: bash
-    - run: cat Usings.cs
+    - run: dotnet sln add ./PartySmurf/PartySmurf.csproj
       shell: bash
-    - run: cat XunitTESTS.csproj
+    - run: dotnet sln add ./XunitTESTS.csproj
       shell: bash
-    - run: ls
-      shell: bash
-    - run: dotnet restore ./PartySmurf.sln
+    - run: dotnet restore ./TEMP_SLN
       shell: bash   
-    - run: dotnet build ./PartySmurf.sln --no-restore
+    - run: dotnet build ./TEMP_SLN --no-restore
       shell: bash
-    - run: dotnet test ./XunitTESTS.csproj --verbosity normal --logger "html;logfilename=testResults.html"
+    - run: dotnet test ./XunitTESTS.csproj --no-build --verbosity normal --logger "html;logfilename=testResults.html"
       shell: bash
