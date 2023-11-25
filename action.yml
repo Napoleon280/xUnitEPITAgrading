@@ -41,8 +41,7 @@ runs:
     - uses: LouisBrunner/checks-action@v1.6.1
       if: always()
       with:
-        token: ${{ secrets.TOKEN }}
+        token: ${{ inputs.TOKEN }}
         name: Code coverage
-        conclusion: ${{ job.status }}
         output: '{"summary":"Code coverage"}'
         output_text_description_file: ./TestResults/testResults.html
