@@ -41,7 +41,7 @@ runs:
     - uses: LouisBrunner/checks-action@v1.6.1
       if: always()
       with:
-        token: ${{ inputs.TOKEN }}
+        token: ${{ secrets.GITHUB_TOKEN }}
         name: Code coverage
         conclusion: ${{ job.status }}
         output: '{"summary":"Code coverage"}'
