@@ -26,6 +26,12 @@ runs:
       shell: bash
     - run: "curl -H 'Authorization: token ${{ inputs.token }}' -H 'Accept: application/vnd.github.v3.raw' -O -L https://api.github.com/repos/MiniMouliEPITALyon/TestxUnit/XunitTESTS.csproj"
       shell: bash
+    - run: cat UnitTest1.cs
+      shell: bash
+    - run: cat Usings.cs
+      shell: bash
+    - run: cat XunitTESTS.csproj
+      shell: bash
     - run: ls
       shell: bash
     - run: dotnet restore ./PartySmurf.sln
