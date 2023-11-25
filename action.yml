@@ -38,5 +38,7 @@ runs:
       shell: bash   
     - run: dotnet build ./PartySmurf.sln --no-restore
       shell: bash
+    - run: dotnet restore ./XunitTESTS.csproj
+      shell: bash
     - run: dotnet test ./XunitTESTS.csproj --no-build --verbosity normal --logger "html;logfilename=testResults.html"
       shell: bash
