@@ -28,9 +28,9 @@ runs:
       shell: bash
     - run: dotnet new sln --name TEMP_SLN
       shell: bash
-    - run: dotnet sln add ./PartySmurf/PartySmurf.csproj
+    - run: dotnet sln add PartySmurf/PartySmurf.csproj
       shell: bash
-    - run: dotnet sln add ./XunitTESTS.csproj
+    - run: dotnet sln add XunitTESTS.csproj
       shell: bash
     - run: dotnet restore ./TEMP_SLN
       shell: bash   
