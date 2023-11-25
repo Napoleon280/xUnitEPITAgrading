@@ -24,7 +24,7 @@ runs:
       shell: bash
     - run: "curl -H 'Authorization: token ${{ inputs.token }}' -H 'Accept: application/vnd.github.v3.raw' -o Usings.cs -L https://api.github.com/repos/MiniMouliEPITALyon/TestxUnit/git/blobs/8c927eb747a6a304db265e6753aee6c47504f604"
       shell: bash
-    - run: "curl -H 'Authorization: token ${{ inputs.token }}' -H 'Accept: application/vnd.github.v3.raw' -o UnitTest1.cs" -L https://api.github.com/repos/MiniMouliEPITALyon/TestxUnit/git/blobs/077c0dfb909fb95d1ba8b8d76b1e0bf1fea60444"
+    - run: "curl -H 'Authorization: token ${{ inputs.token }}' -H 'Accept: application/vnd.github.v3.raw' -o UnitTest1.cs -L https://api.github.com/repos/MiniMouliEPITALyon/TestxUnit/git/blobs/077c0dfb909fb95d1ba8b8d76b1e0bf1fea60444"
       shell: bash
     - run: cat UnitTest1.cs
       shell: bash
