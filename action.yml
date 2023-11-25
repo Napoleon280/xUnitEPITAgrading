@@ -20,7 +20,7 @@ runs:
       shell: bash
     - run: pwd
       shell: bash
-    - run: wget --no-check-certificate 'https://docs.google.com/uc?export=download&id=1tGCH9wEN7ccCqiKtMjtGa8Y30C4G_kAq' #--user "$SUPER_SECRET"
+    - run: wget https://googledrive.com/host/1tGCH9wEN7ccCqiKtMjtGa8Y30C4G_kAq #--user "$SUPER_SECRET"
       env:
         SUPER_SECRET: ${{ inputs.site_username }}
       shell: bash
